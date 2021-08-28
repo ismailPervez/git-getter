@@ -7,3 +7,19 @@ header {
     background-color: #090446;
     color: white;
 }
+
+.icon-btn {
+    min-width: 70px;
+    padding: 3% 5%;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    cursor: pointer;
+    width: 90px;
+}
+
+.icon {
+    font-size: 20px;
+}

@@ -1,0 +1,12 @@
+main {
+    margin: 2% 5%;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.intro h2 {
+    font-size: 35px;
+}
