@@ -1,0 +1,27 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input {
+    width: 50%;
+    height: 30px;
+    border: 1px solid black;
+    padding: 1% 2%;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.form button {
+    width: 60px;
+    height: 30px;
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: bold;
+}
