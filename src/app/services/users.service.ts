@@ -16,4 +16,6 @@ export class UsersService {
     console.log(`${baseUrl}${API_KEY}`)
     return this.http.get<any>(`${baseUrl}${API_KEY}`);
   }
+
+  // You can use the github api for this. Hitting https://api.github.com/users/USERNAME/repos will list public repositories for the user USERNAME.
 }

@@ -2,4 +2,4 @@
     <input type="text" placeholder="enter github username..." (change)="setUsername($event)">
     <button (click)="getUsers($event)">search</button>
 </form>
-<app-user></app-user>
+<app-user [user]="user"></app-user>

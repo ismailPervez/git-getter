@@ -10,6 +10,7 @@ export class UserDisplayComponent implements OnInit {
 
   // search term
   username: string;
+  user: object;
 
   constructor(private usersService: UsersService) { }
 
@@ -28,7 +29,8 @@ export class UserDisplayComponent implements OnInit {
     }
     else {
       this.usersService.getData(this.username).subscribe((users) => {
-        console.log(users);
+        console.log(users)
+        this.user = users;
       })
     }
   }
