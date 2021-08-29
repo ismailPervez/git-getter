@@ -9,18 +9,28 @@ import { UsersService } from 'src/app/services/users.service';
 export class UserDisplayComponent implements OnInit {
 
   // search term
-  // username: string;
+  username: string;
 
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
   }
 
+  setUsername(event: any) {
+    this.username = event.target.value;
+  }
+
   getUsers(event: any) {
     event.preventDefault();
-    this.usersService.getData().subscribe((users) => {
-      console.log(users);
-    })
+    console.log(this.username);
+    if (!this.username) {
+      alert("please enter a username to search")
+    }
+    else {
+      this.usersService.getData(this.username).subscribe((users) => {
+        console.log(users);
+      })
+    }
   }
 
 }

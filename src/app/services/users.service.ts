@@ -10,9 +10,9 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
+  getData(resource: string): Observable<any> {
     const API_KEY = environment.github_api_key;
-    const baseUrl = "https://api.github.com/users/ismailpervez?access_token=";
+    const baseUrl = `https://api.github.com/users/${resource}?access_token=`;
     console.log(`${baseUrl}${API_KEY}`)
     return this.http.get<any>(`${baseUrl}${API_KEY}`);
   }
