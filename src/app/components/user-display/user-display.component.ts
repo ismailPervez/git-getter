@@ -8,6 +8,9 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class UserDisplayComponent implements OnInit {
 
+  // search term
+  // username: string;
+
   constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
