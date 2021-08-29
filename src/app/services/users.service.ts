@@ -12,8 +12,8 @@ export class UsersService {
 
   getData(): Observable<any> {
     const API_KEY = environment.github_api_key;
-    const baseUrl = "https://api.github.com/users";
-  
-    return this.http.get<any>(baseUrl);
+    const baseUrl = "https://api.github.com/users/ismailpervez?access_token=";
+    console.log(`${baseUrl}${API_KEY}`)
+    return this.http.get<any>(`${baseUrl}${API_KEY}`);
   }
 }
