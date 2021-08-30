@@ -6,6 +6,7 @@ import { environment } from "../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
+
 export class UsersService {
 
   constructor(private http: HttpClient) { }
@@ -24,3 +25,8 @@ export class UsersService {
 
   // You can use the github api for this. Hitting https://api.github.com/users/USERNAME/repos will list public repositories for the user USERNAME.
 }
+
+/**
+ * username: string;
+ * id: number;
+ */
