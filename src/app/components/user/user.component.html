@@ -6,9 +6,11 @@
     </div>
     <div class="details">
         <p>username: <span>{{username}}</span></p>
-        <p>repos: <span>15</span></p>
+        <p>repos: <span>{{repos}}</span><a class="link check-repo-btn" [routerLink]="['/repos', username]">check repos</a></p>
         <p>followers: <span>{{followers}}</span></p>
         <p>following: <span>{{following}}</span></p>
     </div>
 </div>
-<p *ngIf="!user">enter name of user to search</p>
+<div class="message" *ngIf="!user">
+    <p>enter name of user to search</p>
+</div>

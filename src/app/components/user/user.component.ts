@@ -13,6 +13,7 @@ export class UserComponent implements OnChanges {
   profile_pic: string;
   followers: number;
   following: number;
+  repos: number;
 
   constructor() { }
 
@@ -27,6 +28,7 @@ export class UserComponent implements OnChanges {
       this.profile_pic = user.avatar_url;
       this.followers = user.followers;
       this.following = user.following;
+      this.repos = user.public_repos;
     }
   }
 

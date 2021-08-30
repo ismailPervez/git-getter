@@ -9,6 +9,8 @@ import { ContainerComponent } from './components/container/container.component';
 import { UserDisplayComponent } from './components/user-display/user-display.component';
 import { UserComponent } from './components/user/user.component';
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { RouterModule } from "@angular/router";
+import { UserRepoComponent } from './components/user-repo/user-repo.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,18 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
     HeaderComponent,
     ContainerComponent,
     UserDisplayComponent,
-    UserComponent
+    UserComponent,
+    UserRepoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path: "", component: ContainerComponent},
+      {path: "repos/:username", component: UserRepoComponent}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

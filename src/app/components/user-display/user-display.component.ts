@@ -28,10 +28,16 @@ export class UserDisplayComponent implements OnInit {
       alert("please enter a username to search")
     }
     else {
-      this.usersService.getData(this.username).subscribe((users) => {
-        console.log(users)
-        this.user = users;
-      })
+      try {
+        this.usersService.getData(this.username).subscribe((users) => {
+          console.log(users)
+          this.user = users;
+        })
+      }
+
+      catch(error) {
+        console.log(error);
+      }
     }
   }
 
