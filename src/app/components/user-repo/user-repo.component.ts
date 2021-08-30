@@ -28,7 +28,14 @@ export class UserRepoComponent implements OnInit {
         this.repos = data;
         this.repos.forEach((repo: any) => {
           // console.log("repo name: ", repo["name"]);
-          this.repos_names.push(repo["name"]);
+          // repo["description"];
+          // html_url
+          var repoObj = {
+            title: repo["name"],
+            description: repo["description"],
+            link: repo["html_url"]
+          }
+          this.repos_names.push(repoObj);
         })
       })
   }

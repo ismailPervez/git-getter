@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-user',
@@ -14,6 +15,8 @@ export class UserComponent implements OnChanges {
   followers: number;
   following: number;
   repos: number;
+  // userObj: User = new User("", "", 0, 0, 0);
+  userObj: User;
 
   constructor() { }
 
@@ -23,7 +26,7 @@ export class UserComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.user.currentValue !== undefined) {
       var user = changes.user.currentValue;
-      console.log(user.login);
+      // console.log(user.login);
       this.username = user.login;
       this.profile_pic = user.avatar_url;
       this.followers = user.followers;
