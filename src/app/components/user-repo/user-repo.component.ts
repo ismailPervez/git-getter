@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router"
 import { UsersService } from 'src/app/services/users.service';
+import { Repo } from 'src/app/models/repo';
 
 @Component({
   selector: 'app-user-repo',
@@ -11,7 +12,7 @@ export class UserRepoComponent implements OnInit {
 
   username: any;
   repos: object[];
-  repos_names: any[] = [];
+  repoObjs: Repo[] = [];
 
   constructor(private route: ActivatedRoute, private usersService: UsersService) { }
 
@@ -35,7 +36,7 @@ export class UserRepoComponent implements OnInit {
             description: repo["description"],
             link: repo["html_url"]
           }
-          this.repos_names.push(repoObj);
+          this.repoObjs.push(repoObj);
         })
       })
   }
