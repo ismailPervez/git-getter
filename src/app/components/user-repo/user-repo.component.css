@@ -18,3 +18,10 @@ ul {
     color: black;
     font-weight: bold;
 }
+
+@media screen and (max-width: 390px) {
+    .repo {
+        padding: 4%;
+        margin-bottom: 4%;
+    }
+}
