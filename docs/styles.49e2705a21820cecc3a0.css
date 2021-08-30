@@ -1,0 +1,1 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Righteous&display=swap);:root{--header-font:"Righteous",cursive;--text-font:"Open Sans",sans-serif}*{margin:0;padding:0;box-sizing:border-box;font-family:var(--text-font)}h1,h2,h3{font-family:var(--header-font)}p{font-family:var(--text-font)}.link{color:#fff;text-decoration:none}
