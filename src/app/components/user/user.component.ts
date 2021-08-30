@@ -10,12 +10,6 @@ export class UserComponent implements OnChanges {
 
   // user object from parent
   @Input() user: object;
-  username: string;
-  profile_pic: string;
-  followers: number;
-  following: number;
-  repos: number;
-  // userObj: User = new User("", "", 0, 0, 0);
   userObj: User;
 
   constructor() { }
