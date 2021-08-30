@@ -8,6 +8,13 @@ header {
     color: white;
 }
 
+.share-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+}
+
 .icon-btn {
     min-width: 70px;
     padding: 3% 5%;
