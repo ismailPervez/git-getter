@@ -24,13 +24,16 @@ export class UserRepoComponent implements OnInit {
     // get data
     this.usersService.getRepos(this.username)
       .subscribe(data => {
-        // console.log(data);
+        console.log(data);
         this.repos = data;
         this.repos.forEach((repo: any) => {
-          console.log("repo name: ", repo["name"]);
+          // console.log("repo name: ", repo["name"]);
           this.repos_names.push(repo["name"]);
         })
       })
   }
 
 }
+
+
+// we need to create 2 classes 1. a repo class, 2 a user class
