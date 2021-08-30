@@ -26,12 +26,14 @@ export class UserComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     if (changes.user.currentValue !== undefined) {
       var user = changes.user.currentValue;
-      // console.log(user.login);
-      this.username = user.login;
-      this.profile_pic = user.avatar_url;
-      this.followers = user.followers;
-      this.following = user.following;
-      this.repos = user.public_repos;
+
+      this.userObj = {
+        username: user.login,
+        profile_pic: user.avatar_url,
+        repos: user.public_repos,
+        followers: user.followers,
+        following: user.following
+      }
     }
   }
 

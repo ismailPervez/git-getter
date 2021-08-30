@@ -3,7 +3,10 @@
         <li *ngFor="let repo_name of repos_names" class="repo">
             <div>
                 <p>title: <a class="link" [href]="repo_name.link" target="_blank">{{repo_name.title}}</a></p>
-                <p>description: <span>{{repo_name.description}}</span></p>
+                <p *ngIf="repo_name.description; else noDescriptionBlock">description: <span>{{repo_name.description}}</span></p>
+                <ng-template #noDescriptionBlock>
+                    <p>this repo has no description :(</p>
+                </ng-template>
             </div>
         </li>
     </ul>
