@@ -12,13 +12,13 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getData(username: string): Observable<any> {
-    const API_KEY = environment.github_api_key;
+    const API_KEY = environment.apiKey;
     var baseUrl = `${environment.apiUrl}${username}?access_token=`;
     return this.http.get<any>(`${baseUrl}${API_KEY}`);
   }
 
   getRepos(username: string) {
-    const API_KEY = environment.github_api_key;
+    const API_KEY = environment.apiKey;
     var baseUrl = `${environment.apiUrl}${username}/repos?access_token=`;
     return this.http.get<any>(`${baseUrl}${API_KEY}`);
   }
